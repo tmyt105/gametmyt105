@@ -9,7 +9,7 @@
   <title>tt</title>
   <style>
     body {
-      color: #00ccff;
+      color: #ffffff;
       font-family: sans-serif;
       overflow: hidden;
       margin: 0;
@@ -112,10 +112,10 @@
       border-radius: 4px;
     }
     .control-button:hover {
-      background: #002aff26;
+      background: #ff4c4c26;
     }
     .control-button.active {
-      background: #002aff59;
+      background: #ff4c4c59;
     }
     .fullscreen-button {
       background: white !important;
@@ -213,9 +213,9 @@
       };
 
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
-      scaffolding.setAccentColor("#002aff");
+      scaffolding.setAccentColor("#ff4c4c");
 
-      scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "638318238"));
+      scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "638310641"));
 
       const stopAllButton = document.createElement('img');
       stopAllButton.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="#ec5959" stroke="#b84848" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M4.3.5h5.4l3.8 3.8v5.4l-3.8 3.8H4.3L.5 9.7V4.3z"/></svg>');
