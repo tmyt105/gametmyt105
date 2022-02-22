@@ -215,7 +215,15 @@
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
       scaffolding.setAccentColor("#ff4c4c");
 
-      scaffolding.addCloudProvider(new Scaffolding.Cloud.LocalStorageProvider("cloudvariables:kinngaku"));
+      {const providers = {};
+providers.local = new Scaffolding.Cloud.LocalStorageProvider("cloudvariables:kinngaku");
+providers.ws = new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "kinngaku");
+for (const provider of Object.values(providers)) scaffolding.addCloudProvider(provider);
+scaffolding.addCloudProviderOverride("☁ deta", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 月", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ タイプ", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 数日間の合計", providers["ws"] || null);
+};
 
       vm.setTurboMode(false);
       if (vm.setInterpolation) vm.setInterpolation(false);
