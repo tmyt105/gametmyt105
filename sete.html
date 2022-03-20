@@ -1,0 +1,30 @@
+<p>選択した色 <span id="span1"></span></p>
+<form name="darkmode">
+	<select name="darkmode">
+	    <option value="false">ダークモード</option>
+	    <option value="true">ライトモード</option>
+	    <option value="">システム</option>
+	</select>
+  </form>
+<input type="button" value="反映" onclick="clickBtn1()"/>
+
+<script>
+function clickBtn1(){
+
+	const color1 = document.form1.darkmode;
+
+	
+	const num = darkmode.selectedIndex;
+
+
+	
+	const str = darkmode.options[num].value;
+
+
+showLocalVal();
+ 
+    var darkmode = str;
+   
+ 
+}
+</script>
